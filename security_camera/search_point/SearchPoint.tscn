@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b40hk06cwcspg"]
+
+[ext_resource type="Script" path="res://security_camera/search_point/SearchPoint.cs" id="1_1bo42"]
+[ext_resource type="Material" uid="uid://cstvx307goato" path="res://materials/highlight.material" id="2_4iubl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mcquy"]
+size = Vector3(1, 0.2, 0.2)
+
+[node name="SearchPoint" type="Node3D"]
+script = ExtResource("1_1bo42")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_mcquy")
+surface_material_override/0 = ExtResource("2_4iubl")
